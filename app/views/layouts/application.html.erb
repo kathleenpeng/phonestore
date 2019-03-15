@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PhoneStore</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+   
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    
+
+        
+     
+    <!-- Top menu -->
+     
+   
+     <div class="container-1">
+      
+       <div class="box-1"><b>PhoneStore</b></div>
+       
+       <div class="box-2"><button class="DisplayTime" onclick="displayDate()"> Toggle Time</button>
+          <p id="demo"></p>
+       </div>
+ 
+       <div class="box-3">
+       
+        <!-- Sidebar (hidden by default) -->
+          <nav class="closeMenu" style="display:none;width:12%;min-width:80px" id="mySidebar">
+            
+            <a href="#phones" onclick="w3_close()" class="phoneClose">Phones</a><br>
+            <a href="#menu" onclick="w3_close()" class="phoneClose">Close Menu</a><br>
+            
+          </nav>
+           <span class="iconFont" onclick="w3_open()">☰</span>
+        </div> 
+    </div>
+    
+    <%= yield %>
+    <%= link_to 'New Phone', new_phone_path %>
+    
+    <footer class="foot">
+      <p>Copyright &copy; PhoneStore Ltd.</p>
+      
+    </footer>
+    
+    
+    
+     <script>
+           // JavaScript for time display
+           
+            var myVar = setInterval(myTimer, 800);
+
+            function myTimer() {
+              var d = new Date();
+              document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+            }
+     
+          // JavaScript to close sidebar
+          function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+          }
+          
+    
+          
+         // JQuery code go here
+         
+         $(document).ready(function(){
+             
+           // JQuery effect of click to toggle time 
+              $( ".DisplayTime" ).click(function() {
+                   $( "#demo" ).slideToggle( "slow" );
+              });
+                 
+         //JQuery for display/close menu bar
+              $( ".iconFont" ).click(function() {
+                  $( "nav" ).toggle("fast");
+              });
+                 
+         });
+ 
+    </script>
+    
+  </body>
+</html>

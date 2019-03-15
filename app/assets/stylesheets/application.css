@@ -1,0 +1,224 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+   
+.container-1{
+    display: flex;
+    align-items: flex-center;
+    /*background-color: pink;*/
+    height: 60px;
+    
+}
+
+.container-1 div{
+    /*border: 2px solid red;*/
+    padding: 10px;
+}
+.box-1 {
+     flex: 1;
+     color: #20B2AA;
+     font-size:40px;
+     
+ }
+.box-2 {
+     flex: 2;
+     font-size: 16px;
+     text-align: center;
+
+ }
+
+.box-3 {
+     flex: 1;
+     font-size:30px;
+     text-align: right;
+     
+}
+
+.box-3:hover {
+    color: #20B2AA;
+    cursor: pointer;
+    
+}
+button {
+    font-size: 14px;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #20B2AA;
+    color: white;
+    cursor: pointer;
+}
+#demo {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #20B2AA;
+}
+
+.closeMenu{
+    
+    background-color: lightblue;
+    font-size: 16px;
+    padding-top: 12px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    margin-left: 90px;
+    line-height: 20px;
+    
+    
+}
+.closeMenu a{
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+
+#itemsContainer {
+    
+    width: 100%;
+    text-align: center;
+    
+    
+}
+
+#itemsContainer h1 {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    line-height: 18px;
+    font-size:  2.5em;
+    font-weight: bold;
+    line-height: 1em;
+    
+    
+}
+.phoneInfo {
+    display: flex;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 20%;
+    padding:10px;
+    min-height: 300px;
+   
+}
+
+.phoneInfo:hover {
+    background-color: #FDF5E6;
+    
+}
+
+.phoneInfo h1 {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 0px 16px;
+    text-decoration: none;
+    font-size: 24px
+    
+}
+.phoneInfo h2 {
+   display: block;
+    color: black;
+    text-align: center;
+    padding: 0px 16px;
+    text-decoration: none;
+    font-size: 20px
+    
+}
+
+.phoneInfo:hover {
+    font-size: 1.3em;
+}
+
+.phoneInfo p {
+   display: block;
+    color: black;
+    line-height: 25px;
+    text-align: center;
+    padding: 0px 16px;
+    text-decoration: none;
+    font-size: 16px
+    
+}
+
+.priceStyle{
+    color: red;
+}
+.phoneImg {
+    width: 40%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block;
+    
+}
+
+.foot {
+    min-height: 42px;
+    background-color: #20B2AA;
+    width: 100%;
+    margin-top: 15px;
+    overflow: auto;
+    text-align: center;
+    color: white;
+}
+
+
+@media only screen and (max-width: 900px) {
+  body {
+    background-color: lightblue;
+   
+  }
+  
+  .container-1{
+    display: flex;
+    align-items: flex-center;
+    height: 60px;
+    
+  }
+ .phoneInfo {
+    width: 40%;
+   
+  }
+
+ .phoneInfo:hover {
+    background-color: #FDF5E6;
+    
+ }
+ .box-1 {
+     width: 100%;
+     text-align: center;
+     color: #ffffff;
+     font-size:40px;
+     
+ }
+ .box-2 {
+     display: none;
+
+ }
+
+.box-3 {
+     display: none;
+     
+ }
+
+}

@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+ <div id="itemsContainer">
+  
+    <h1>Welcome to our phone store<br></h1>
+   
+    <% @phones.each do |phone| %>
+    
+      <div class="phoneInfo">
+        <h2><%= phone.make %></h2>
+        <%= link_to (image_tag phone.image_url, :class => "phoneImg"), phone %>
+       
+        <h2><%= phone.model %></h2>
+        <p>Color: <%= phone.color %><br>
+        <span class="priceStyle"> Price: <%= number_to_currency(phone.price, :unit => "€") %></span>
+        <br>
+        <%= phone.description %></p>
+        <%= link_to 'Show', phone %>
+        <%= link_to 'Edit', edit_phone_path(phone) %></td>
+        <%= link_to 'Delete', phone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </div>
+    <% end %>
+
+</div>
+<br>
+
+

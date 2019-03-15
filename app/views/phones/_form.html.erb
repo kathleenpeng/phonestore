@@ -1,0 +1,49 @@
+<%= form_with(model: phone, local: true) do |form| %>
+  <% if phone.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(phone.errors.count, "error") %> prohibited this phone from being saved:</h2>
+
+      <ul>
+      <% phone.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+
+
+  <div class="field">
+    <%= form.label :make %>
+    <%= form.text_field :make , id: :phone_make, :class=> 'w3-container w3-padding', :style=>"width:100%; height:35px;" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_url %>
+    <%= form.text_field :image_url, id: :phone_image_url, :class=> 'w3-container w3-padding', :style=>"width:100%; height:35px;" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :model %>
+    <%= form.text_field :model, id: :phone_model, :class=> 'w3-container w3-padding', :style=>"width:100%; height:35px;" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color %>
+    <%= form.text_field :color, id: :phone_color, :class=> 'w3-container w3-padding', :style=>"width:100%; height:35px;" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price, id: :phone_price, :class=> 'w3-container w3-padding', :style=>"width:100%; height:35px;" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :phone_description, :class=> 'w3-container w3-padding', :style=>"width:100%; height:35px;" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: 'w3-button w3-padding-large w3-white w3-border' %>
+  </div>
+<% end %>
